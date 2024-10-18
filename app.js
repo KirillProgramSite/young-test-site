@@ -1,21 +1,51 @@
-// window.addEventListener('scroll', () => {
-//     const phone = document.querySelector('.work__img img');
-//     const scrollPosition = window.scrollY;
-  
-//     // Двигаем телефон медленнее прокрутки для эффекта параллакса
-//     phone.style.transform = `translateX(-${scrollPosition * 0.05}px)`; // Множитель 0.5 делает движение медленнее
-//   });
-  
-
 gsap.registerPlugin(ScrollTrigger);
+const texts = document.querySelectorAll(".hero__footer p");
 
+
+// Анимация телефона при скролле
 gsap.to(".work__img img", {
-  x: -15, // Укажи, насколько далеко телефон должен двигаться влево
+  x: -15, 
   ease: "none",
   scrollTrigger: {
-    trigger: ".work__img img", // Триггер для начала анимации
-    start: "top top", // Когда верхняя часть телефона касается верхней части экрана
-    end: "bottom 100%", // Когда телефон уходит за нижнюю часть экрана
-    scrub: true // Связь со скроллом для эффекта параллакса
+    trigger: ".work__img img", 
+    start: "top top", 
+    end: "bottom 100%", 
+    scrub: true
   }
+});
+
+
+// Анимация при перемещения скролла
+
+if(window.innerWidth > 768){
+  const el_animate = document.querySelectorAll(".animate_move");
+
+  window.addEventListener("mousemove", (ev) => {
+    const {clientY} = ev;
+
+    el_animate.forEach((el) => {
+      gsap.to(el, {
+        y: (clientY - window.innerHeight / 2) * 0.05,
+        duration: 0.5,
+        ease: 'power1.out', 
+      })
+    })
+  })
+}
+
+// Анимация отрисовки линии
+
+gsap.to('.underline path', {
+  strokeDashoffset: 0, 
+  duration: 1,         
+  ease: 'power2.out'   
+});
+
+
+gsap.set(texts, { autoAlpha: 0, position: 'absolute', }); // Устанавливаем начальное состояние (все скрыты)
+const tl = gsap.timeline({ repeat: -1 }); // repeat: -1 для бесконечной анимации
+
+texts.forEach((text, i) => {
+  tl.to(text, { autoAlpha: 1, duration: 1 }) // Плавное появление
+    .to(text, { autoAlpha: 0, duration: 1 }, "+=2"); // Плавное исчезновение после паузы
 });

@@ -46,7 +46,64 @@ body{
     margin-left: 12px;
 }
 
-.hero{
+.hero {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 150px;
+  }
+  
+  .hero__title {
+    position: relative;
+    margin-left: 5vw;
+  }
+
+  .hero__title h1{
+    font-size: 8.33vw;
+    text-align: center;
+    line-height: 100%;
+    width: 79.26vw;
+  }
+
+  .hero__title h1 span{
+    color: #25A3E1;
+  }
+  
+  .tg {
+    position: absolute;
+    top: 54%;
+    left: 63%;
+    transform: translateX(-50%);
+    width: 7vw; /* Задаем фиксированный размер */
+  }
+  
+  .sticker {
+    transform: rotate(10deg);
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    width: 12vw; /* Задаем фиксированный размер */
+  }
+
+  .underline{
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    width: 30vw;
+  }
+
+  .underline path {
+    stroke-dasharray: 428;   /* Длина пути (приблизительное значение) */
+    stroke-dashoffset: 428;  /* Начальное значение, чтобы линия не отображалась */
+  }
+  
+  /* .hero__footer {
+    text-align: center;
+    font-size: 1.5vw;
+  } */
+
+  
+
+/* .hero{
     margin-bottom: 150px;
 }
 
@@ -81,6 +138,21 @@ body{
 
 .hero__footer p{
     font-size: 60px;
+    color: #616267;
+} */
+
+.hero__footer {
+    display: flex;
+    align-items: center; /* Вертикально центрирует текст */
+    justify-content: center; /* Горизонтально центрирует текст */
+    position: relative; /* Контейнер для абсолютного позиционирования текста */
+    height: 5vw; /* Задайте высоту под текст */
+  }
+
+.hero__footer p{
+    position: absolute;
+    text-align: center;
+    font-size: 4vw;
     color: #616267;
 }
 
