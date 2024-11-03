@@ -3,16 +3,22 @@ const texts = document.querySelectorAll(".hero__footer p");
 
 
 // Анимация телефона при скролле
-gsap.to(".work__img img", {
-  x: -15, 
-  ease: "none",
-  scrollTrigger: {
-    trigger: ".work__img img", 
-    start: "top top", 
-    end: "bottom 100%", 
-    scrub: true
-  }
+
+
+gsap.matchMedia().add("(min-width: 768px)", () => {
+  // Анимация для планшетов, ноутбуков и десктопов (экран шире 768px): телефон перемещается вправо
+  gsap.to(".work__img img", {
+    x: 15, // Смещение по оси X вправо
+    ease: "none",
+    scrollTrigger: {
+      trigger: ".work__img img",
+      start: "top top",
+      end: "bottom 100%",
+      scrub: true
+    }
+  });
 });
+
 
 
 // Анимация при перемещения скролла

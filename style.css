@@ -37,6 +37,10 @@ body{
     justify-content: space-between;
 }
 
+.header__contact.mob{
+    display: none;
+}
+
 
 .header__contact a{
     color:black;
@@ -167,28 +171,120 @@ body{
 }
 
 .work__text h2{
-    font-size: 64px;
-    width: 700px;
+    font-size: 5vw;
+    width: 65vw;
     margin-bottom: 27px;
 }
 
 .work__text ul{
+    margin-top: 3vw;
     list-style: none;
 }
 
 .work ul li{
-    font-size: 36px;
+    width: 60vw;
+    font-size: 2vw;
     margin-bottom: 30px;
 }
 
 .work__img img{
-    width: 450px;
+    width: 28vw;
     margin-top: -50px;
 }
 
+.present{
+    margin-top: 95px;
+}
+
+.present__link a{
+    text-decoration: underline;
+    font-size: 2vw;
+    width: 10vw;
+}
+
+.present__title{
+    width: 25vw;
+}
+
+.present__title a{
+    text-decoration: underline;
+    font-size: 5vw;
+    color: black;
+}
+
+
 @media(max-width: 426px){
+    .header__contact{
+        display: none;
+    }
+
+    .header__contact.mob{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .hero__title h1{
+        font-size: 3em;
+    }
     .wrapper{
         flex-direction: column;
         justify-content: center;
+    }
+
+    .tg{
+        width: 9vw;
+        top: 54%;
+        left: 69%;
+    }
+
+    .sticker{
+        width: 16vw;
+        left: 0%;
+    }
+
+    .work ul li{
+        width: 90vw;
+        font-size: 1em;
+    }
+    
+    .underline{
+        width: 40vw;
+        top: 65%;
+        left: 6%;
+    }
+
+    .work__img img{
+        width: 90vw;
+        margin-top: 0;
+    }
+
+    .hero__footer{
+        margin-top: 5px;
+    }
+
+    .hero__footer p{
+        font-size: 20px;
+    }
+
+    .present{
+        text-align: center;
+    }
+
+    .present__link{
+        margin-bottom: 10px;
+    }
+
+    .present__title{
+        width: auto;
+    }
+
+    .present__link a{
+        font-size: 8vw;
+    }
+    
+    .present__title a{
+        font-size: 11vw;
     }
 }
