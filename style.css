@@ -26,6 +26,10 @@ body{
     align-items: flex-start;
 }
 
+.wrapper.center{
+    justify-content: center;
+}
+
 .header{
     margin-top: 80px;
     margin-bottom: 65px;
@@ -100,50 +104,7 @@ body{
     stroke-dashoffset: 428;  /* Начальное значение, чтобы линия не отображалась */
   }
   
-  /* .hero__footer {
-    text-align: center;
-    font-size: 1.5vw;
-  } */
 
-  
-
-/* .hero{
-    margin-bottom: 150px;
-}
-
-.hero__title{
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.hero__title h1{
-    font-size: 120px;
-    text-align: center;
-    line-height: 90%;
-}
-
-.tg, .sticker{
-    position: absolute;
-}
-
-.tg {
-    top: 123px;
-    left: 461px;
-}
-
-.sticker{
-    top: 86px;
-    right: -32px;
-}
-
-.hero__footer{
-    text-align: center;
-}
-
-.hero__footer p{
-    font-size: 60px;
-    color: #616267;
-} */
 
 .hero__footer {
     display: flex;
@@ -211,6 +172,18 @@ body{
     text-decoration: underline;
     font-size: 5vw;
     color: black;
+}
+
+.footer{
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    background-color: #25A3E1;
+}
+
+.footer a{
+    color: white;
 }
 
 
