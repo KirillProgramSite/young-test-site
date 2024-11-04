@@ -227,7 +227,7 @@ body{
     }
 
     .hero__title h1{
-        font-size: 3em;
+        font-size: 9vw;
     }
     .wrapper{
         flex-direction: column;
@@ -235,14 +235,12 @@ body{
     }
 
     .tg{
-        width: 9vw;
         top: 54%;
-        left: 69%;
+        left: 64.5%;
     }
 
     .sticker{
-        width: 16vw;
-        left: 0%;
+        left: 12%;
     }
 
     .work ul li{
@@ -253,7 +251,7 @@ body{
     .underline{
         width: 40vw;
         top: 65%;
-        left: 6%;
+        left: 10%;
     }
 
     .work__img img{
